@@ -1,6 +1,6 @@
 # html-effectiveness-docs
 
-A Codex skill for project documentation that turns complex project knowledge into useful HTML work interfaces, then syncs durable conclusions back into Markdown.
+An agent skill for project documentation that turns complex project knowledge into useful HTML work interfaces, then syncs durable conclusions back into Markdown.
 
 [中文说明](README.zh-CN.md)
 
