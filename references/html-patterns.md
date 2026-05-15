@@ -2,6 +2,11 @@
 
 Use self-contained HTML as a working interface, not as decoration.
 
+These patterns are inspired by the design approach in
+`https://thariqs.github.io/html-effectiveness/`: the important lesson is not
+the exact CSS. The lesson is to make project knowledge spatial, skimmable,
+portable, and useful for the next decision.
+
 ## File Rules
 
 - Prefer one directly openable `.html` file.
@@ -18,6 +23,41 @@ Use self-contained HTML as a working interface, not as decoration.
 - Use diagrams or boxes and arrows for architecture and flow.
 - Use tables only when comparison benefits from rows and columns.
 - Keep mobile readability: single-column fallback, no fixed-width overflow for main content.
+
+## Style Thinking
+
+Do not hard-code a house style. Instead, design each artifact around the shape
+of the work.
+
+Use these style principles:
+
+- Treat the page as a workbench, not a blog post. The reader should be able to compare, inspect, decide, and export.
+- Make the scan path obvious: title, context, key metrics, recommendation, then supporting detail.
+- Give each section a clear role. Examples: prompt/context, options, code, tradeoffs, timeline, diagram, risks, export.
+- Use spatial layout to reduce memory load. Put comparable things next to each other instead of stacking them far apart.
+- Prefer real project content over placeholders. Real filenames, code paths, statuses, risks, owners, and snippets make the artifact trustworthy.
+- Use restrained visual hierarchy. Labels, section numbers, compact summaries, chips, and callouts should help orientation rather than decorate the page.
+- Use color semantically. Reserve emphasis for status, severity, category, or recommendation; avoid arbitrary ornament.
+- Use surfaces and boundaries to separate kinds of information. A code sample, risk table, mockup, and recommendation should not look like the same object.
+- Keep dense information readable. Dense is fine when it is organized; crowded is not.
+- Show the recommendation without hiding alternatives. The reader should see both the decision path and the rejected paths.
+- Make artifacts feel portable. They should still make sense when opened outside the original chat or handed to another agent.
+- Let the artifact carry the project's tone. A SaaS implementation plan, design-system sheet, incident report, and playful prototype should not all look identical.
+
+## Information Architecture Patterns
+
+Use these reusable composition patterns:
+
+- Hero summary: one compact opening area with artifact type, project name, prompt/context, and the decision the page enables.
+- Metrics strip: small facts such as effort, packages touched, risk count, owner, dates, or affected surfaces.
+- Option grid: parallel cards or columns for alternatives that must be compared.
+- Annotated code block: code plus short notes about what matters and where mistakes happen.
+- Timeline: milestones, incidents, releases, or migration steps.
+- Map: boxes and arrows for modules, data flow, ownership, or request paths.
+- Risk table: severity, failure mode, mitigation, owner, and verification.
+- Export block: a concise Markdown, JSON, or prompt payload that can go back into an agent.
+
+Pick only the patterns that serve the artifact. Do not include every pattern by default.
 
 ## Interaction Rules
 
@@ -38,6 +78,8 @@ Do not hide required information only behind hover states.
 - Use color to encode status, severity, or grouping.
 - Keep text selectable.
 - Keep contrast high enough for comfortable reading.
+- Avoid making a generic dashboard when the user needs a specific artifact. The visual form should match the task: comparison, map, timeline, review, editor, or report.
+- Avoid style rules that require future artifacts to copy exact colors, fonts, spacing, or borders from another example.
 
 ## Required Export Area for Complex Artifacts
 
