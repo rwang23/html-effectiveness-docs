@@ -10,83 +10,6 @@
 git clone https://github.com/rwang23/html-effectiveness-docs.git
 ```
 
-## 安装
-
-这是一个普通的 Agent Skills 风格目录：一个包含 `SKILL.md` 和 `references/` 的文件夹。
-
-### Codex 安装方式
-
-```powershell
-git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
-```
-
-安装后重启 Codex 或重新加载 skills。
-
-### Claude Code 安装方式
-
-个人 skill：
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.claude/skills/html-effectiveness-docs
-```
-
-项目 skill：
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git .claude/skills/html-effectiveness-docs
-```
-
-Claude Code 会从 `~/.claude/skills/` 和项目 `.claude/skills/` 目录发现 skills。
-
-### OpenCode 安装方式
-
-OpenCode 原生全局 skill：
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.config/opencode/skill/html-effectiveness-docs
-```
-
-OpenCode 项目 skill：
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git .opencode/skill/html-effectiveness-docs
-```
-
-OpenCode 也可以发现 Claude-compatible skill 路径，所以 Claude Code 的安装路径也适合作为共享方案。
-
-### OpenClaw 安装方式
-
-全局 skill：
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.openclaw/skills/html-effectiveness-docs
-```
-
-工作区 skill：
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git skills/html-effectiveness-docs
-```
-
-如果 OpenClaw 环境允许 skills 访问工具或 shell，加载前建议先阅读 `SKILL.md` 和 `references/` 内容。
-
-### Hermes 安装方式
-
-本地 skill：
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.hermes/skills/html-effectiveness-docs
-```
-
-Hermes 也可以扫描外部 skill 目录。如果你把共享 skills 放在 `~/.agents/skills`，可以 clone 到那里，并在 `~/.hermes/config.yaml` 的 `skills.external_dirs` 中加入该目录。
-
-### 通用手动安装
-
-1. Clone 这个仓库。
-2. 把整个文件夹放到你的 agent skills 目录。
-3. 保持 `SKILL.md` 和 `references/` 在同一个目录下。
-4. 重启 agent 或重新加载 skill index。
-
 ## 背景
 
 很多项目文档不好用，不是因为内容少，而是因为表达方式太线性。
@@ -209,6 +132,83 @@ Use html-effectiveness-docs to audit our docs folder and sync durable action ite
 ```text
 Use html-effectiveness-docs to create an architecture map of this repo, then write the durable mental model to docs/FORYOU.md.
 ```
+
+## 安装
+
+这是一个普通的 Agent Skills 风格目录：一个包含 `SKILL.md` 和 `references/` 的文件夹。
+
+### Codex 安装方式
+
+```powershell
+git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
+```
+
+安装后重启 Codex 或重新加载 skills。
+
+### Claude Code 安装方式
+
+个人 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.claude/skills/html-effectiveness-docs
+```
+
+项目 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git .claude/skills/html-effectiveness-docs
+```
+
+Claude Code 会从 `~/.claude/skills/` 和项目 `.claude/skills/` 目录发现 skills。
+
+### OpenCode 安装方式
+
+OpenCode 原生全局 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.config/opencode/skill/html-effectiveness-docs
+```
+
+OpenCode 项目 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git .opencode/skill/html-effectiveness-docs
+```
+
+OpenCode 也可以发现 Claude-compatible skill 路径，所以 Claude Code 的安装路径也适合作为共享方案。
+
+### OpenClaw 安装方式
+
+全局 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.openclaw/skills/html-effectiveness-docs
+```
+
+工作区 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git skills/html-effectiveness-docs
+```
+
+如果 OpenClaw 环境允许 skills 访问工具或 shell，加载前建议先阅读 `SKILL.md` 和 `references/` 内容。
+
+### Hermes 安装方式
+
+本地 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.hermes/skills/html-effectiveness-docs
+```
+
+Hermes 也可以扫描外部 skill 目录。如果你把共享 skills 放在 `~/.agents/skills`，可以 clone 到那里，并在 `~/.hermes/config.yaml` 的 `skills.external_dirs` 中加入该目录。
+
+### 通用手动安装
+
+1. Clone 这个仓库。
+2. 把整个文件夹放到你的 agent skills 目录。
+3. 保持 `SKILL.md` 和 `references/` 在同一个目录下。
+4. 重启 agent 或重新加载 skill index。
 
 ## 使用原则
 

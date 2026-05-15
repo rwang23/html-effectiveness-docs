@@ -12,83 +12,6 @@ Inspired by [The unreasonable effectiveness of HTML](https://thariqs.github.io/h
 git clone https://github.com/rwang23/html-effectiveness-docs.git
 ```
 
-## Install
-
-This is a plain Agent Skills-style package: one folder with `SKILL.md` plus a `references/` directory.
-
-### Install for Codex
-
-```powershell
-git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
-```
-
-Restart Codex or reload skills after installation.
-
-### Install for Claude Code
-
-Personal skill:
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.claude/skills/html-effectiveness-docs
-```
-
-Project skill:
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git .claude/skills/html-effectiveness-docs
-```
-
-Claude Code discovers skills from `~/.claude/skills/` and project `.claude/skills/` directories.
-
-### Install for OpenCode
-
-OpenCode native global skill:
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.config/opencode/skill/html-effectiveness-docs
-```
-
-OpenCode project skill:
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git .opencode/skill/html-effectiveness-docs
-```
-
-OpenCode can also discover Claude-compatible skill paths, so the Claude Code install path is a useful shared option.
-
-### Install for OpenClaw
-
-Global skill:
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.openclaw/skills/html-effectiveness-docs
-```
-
-Workspace skill:
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git skills/html-effectiveness-docs
-```
-
-Review the skill contents before loading it into OpenClaw, especially in environments where skills can access tools or shell commands.
-
-### Install for Hermes
-
-Local skill:
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.hermes/skills/html-effectiveness-docs
-```
-
-Hermes can also scan external skill directories. If you keep shared skills in `~/.agents/skills`, clone there and add that directory to `skills.external_dirs` in `~/.hermes/config.yaml`.
-
-### Generic Manual Install
-
-1. Clone this repository.
-2. Put the folder in your agent's skills directory.
-3. Keep `SKILL.md` and `references/` together.
-4. Restart or reload the agent's skill index.
-
 ## Background
 
 Project documentation often fails because it is too linear. Architecture, implementation plans, design systems, PR reviews, reports, and handoffs are usually spatial and comparative: there are modules, tradeoffs, timelines, flows, states, risks, and decisions.
@@ -201,6 +124,83 @@ Use html-effectiveness-docs to audit our docs folder and sync durable action ite
 ```text
 Use html-effectiveness-docs to create an architecture map of this repo, then write the durable mental model to docs/FORYOU.md.
 ```
+
+## Install
+
+This is a plain Agent Skills-style package: one folder with `SKILL.md` plus a `references/` directory.
+
+### Install for Codex
+
+```powershell
+git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
+```
+
+Restart Codex or reload skills after installation.
+
+### Install for Claude Code
+
+Personal skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.claude/skills/html-effectiveness-docs
+```
+
+Project skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git .claude/skills/html-effectiveness-docs
+```
+
+Claude Code discovers skills from `~/.claude/skills/` and project `.claude/skills/` directories.
+
+### Install for OpenCode
+
+OpenCode native global skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.config/opencode/skill/html-effectiveness-docs
+```
+
+OpenCode project skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git .opencode/skill/html-effectiveness-docs
+```
+
+OpenCode can also discover Claude-compatible skill paths, so the Claude Code install path is a useful shared option.
+
+### Install for OpenClaw
+
+Global skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.openclaw/skills/html-effectiveness-docs
+```
+
+Workspace skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git skills/html-effectiveness-docs
+```
+
+Review the skill contents before loading it into OpenClaw, especially in environments where skills can access tools or shell commands.
+
+### Install for Hermes
+
+Local skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.hermes/skills/html-effectiveness-docs
+```
+
+Hermes can also scan external skill directories. If you keep shared skills in `~/.agents/skills`, clone there and add that directory to `skills.external_dirs` in `~/.hermes/config.yaml`.
+
+### Generic Manual Install
+
+1. Clone this repository.
+2. Put the folder in your agent's skills directory.
+3. Keep `SKILL.md` and `references/` together.
+4. Restart or reload the agent's skill index.
 
 ## Principles
 
