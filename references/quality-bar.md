@@ -50,6 +50,28 @@ Avoid:
 - giving abstract docs-audit advice without concrete files or task-list updates
 - ignoring project-local instructions
 - forcing heavy ceremony onto a trivial edit
+- moving, renaming, archiving, or deleting docs without first searching project-wide references and preparing link rewrites
+- treating missing links as acceptable collateral damage during document cleanup
+
+## Documentation Organization Safety Bar
+
+For docs cleanup work, the quality bar includes link safety.
+
+Before recommending any move, rename, archive, or delete:
+
+- search the full project for references to the current path, filename, title, and known aliases
+- identify Markdown links, HTML links, README references, plans, reports, code comments, config references, and generated artifacts
+- show referencing files in the organization workbench
+- provide a link rewrite plan for each reference
+- mark the action blocked when references cannot be updated confidently
+
+Before executing any filesystem organization:
+
+- get explicit user approval
+- preserve history by archiving or marking historical unless deletion was explicitly requested
+- update all known references in the same change
+- verify old references no longer appear except in intentional history/archive notes
+- verify new links resolve when practical
 
 ## Completion Checklist
 

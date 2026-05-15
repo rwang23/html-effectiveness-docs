@@ -24,6 +24,8 @@ Markdown is the durable source of truth. HTML is the working surface.
 - Create `docs/effectiveness-artifact/` only when producing a final HTML artifact.
 - Do not rewrite unrelated docs.
 - Do not erase user-authored content.
+- When docs are moved, renamed, archived, or deleted after approval, update all known references in the same change.
+- Record source-of-truth layout changes in durable docs such as `docs/FORYOU.md`, `docs/memory.md`, or a migration report.
 
 ## Extraction Checklist
 

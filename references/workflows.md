@@ -30,6 +30,8 @@ State material assumptions briefly when local structure is missing.
 
 Choose one intent from `routing.md`. If multiple intents apply, choose the primary user outcome and mention secondary sync work.
 
+Use `docs-organization` when the user asks to clean up, organize, archive, consolidate, rename, move, or delete documentation.
+
 ## 3. Artifact Plan
 
 Before creating a substantial artifact, identify:
@@ -60,6 +62,40 @@ Before writing the HTML, choose at least three of these affordances when the sou
 - export block for the next agent
 
 Keep it structured, readable, and directly useful.
+
+## Documentation Organization Safety
+
+When organizing messy docs, split work into two phases:
+
+1. Proposal phase: generate an organization workbench and Markdown migration plan.
+2. Execution phase: move, rename, archive, delete, or rewrite links only after explicit user approval.
+
+Before proposing any move, rename, archive, or delete action, perform reference impact analysis:
+
+- search for exact paths
+- search for filenames
+- search for document titles
+- search for common aliases or relative links
+- check Markdown links, HTML links, code comments, config, README files, plans, reports, and generated artifacts
+
+The migration plan must include:
+
+- old path
+- proposed action
+- new path or archive location
+- all referencing files found
+- link rewrite plan
+- blocked references that need manual review
+- verification command or method
+
+If references exist and no rewrite plan is available, mark the action as blocked.
+
+Default behavior:
+
+- keep and mark historical instead of deleting
+- archive instead of deleting
+- move only when references can be updated
+- update docs indexes and source-of-truth notes after approved execution
 
 ## 5. Extract Decisions
 
