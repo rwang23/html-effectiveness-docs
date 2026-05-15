@@ -44,6 +44,7 @@ HTML 不是用来替代 Markdown 的。它负责让复杂信息更容易理解�
 - 多个技术方案或设计方向的并排比较
 - 实现计划、里程碑、风险和验证计划
 - 架构地图、模块关系、数据流和热路径
+- 项目智能 dashboard，把 docs、代码、配置、运行脚本、测试和外部集成证据结合起来
 - 设计系统 tokens、组件状态和变体参考
 - 文档审计、缺口检查、过期内容检查
 - PR、架构、设计或文档评审
@@ -60,6 +61,7 @@ references/
   routing.md
   workflows.md
   artifact-types.md
+  project-intelligence.md
   markdown-sync.md
   quality-bar.md
   html-patterns.md
@@ -72,6 +74,7 @@ references/
 - `routing.md`：判断用户请求属于哪类文档任务。
 - `workflows.md`：定义默认工作流。
 - `artifact-types.md`：定义支持的 HTML artifact 类型。
+- `project-intelligence.md`：定义项目级 artifact 如何从文档、代码、配置、运行时、测试和脚本中抽取背景、结构、技术栈、当前状态、风险和证据。
 - `markdown-sync.md`：定义哪些结论要同步回 Markdown。
 - `quality-bar.md`：定义完成标准和反模式。
 - `html-patterns.md`：定义自包含 HTML 的写法和交互约束。

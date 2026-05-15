@@ -39,12 +39,16 @@ Use for system understanding.
 
 Required sections:
 
+- project brief and current stage
+- tech stack summary with evidence paths
 - module map
 - entry points
 - data flow
 - hot paths
 - ownership or boundaries
 - common modification points
+- drilldown detail for important modules, routes, workers, services, schemas, tests, and integrations when present
+- evidence pointers from code/config/runtime files, not only docs
 - durable architecture summary
 
 ## design-reference.html
@@ -68,6 +72,9 @@ Use for documentation audits.
 
 Required sections:
 
+- project brief derived from docs plus code/config/runtime evidence
+- system shape and tech stack summary so the reader understands the project before inspecting docs
+- current state summary including working surfaces, release gates, high-risk areas, and recent completed work when available
 - source-of-truth map that shows which docs are authoritative, historical, raw evidence, or generated output
 - document relationship view, not just a flat list; show how README, plans, reports, memory, architecture docs, and artifacts connect
 - coverage map with gaps, stale areas, contradictions, and duplicated responsibilities
@@ -80,6 +87,7 @@ Required sections:
 
 Minimum interaction:
 
+- overview, architecture/stack, docs, risks/tasks, and evidence drilldown areas when evidence exists
 - filter or focus control for document groups
 - clickable anchors or tabs for at least the major categories
 - expandable evidence or detail sections for important findings
@@ -87,6 +95,7 @@ Minimum interaction:
 Avoid:
 
 - a dashboard that is only a metrics strip plus link index
+- a docs dashboard that does not explain what the project is, how it is built, and what state it is in
 - a table that lists files without explaining relationships, conflicts, or next actions
 - links that replace analysis; the artifact should make the structure observable before the reader opens another file
 
@@ -98,6 +107,7 @@ This artifact is allowed to propose file moves, renames, archive actions, and de
 
 Required sections:
 
+- project brief, domain model, system shape, tech stack, and current state before proposing structure changes
 - current document topology, grouped by source-of-truth, active plans, reports, generated artifacts, raw evidence, historical docs, and duplicates
 - desired document topology with proposed target paths
 - action board grouped by keep, merge, move, rename, archive, and delete candidate

@@ -16,6 +16,7 @@ A successful run satisfies:
 - justified output format
 - useful HTML when HTML is used
 - HTML artifacts expose relationships, evidence, and actions instead of merely linking to files
+- project-level HTML artifacts explain project background, structure, tech stack, current state, and evidence from docs plus code/config/runtime sources
 - durable Markdown sync for decisions and project facts
 - readable handoff for a future agent or developer
 - verification performed and reported
@@ -35,12 +36,39 @@ For non-trivial artifacts, require:
 
 If an artifact mostly contains metrics, links, and a table of files, treat it as an index. An index can be useful, but it does not satisfy this skill's bar for a rich effectiveness artifact unless the user explicitly asked for an index.
 
+## Project Intelligence Quality Bar
+
+For project-level artifacts, the first screen must answer:
+
+- What is this project?
+- Who or what does it serve?
+- What are the main system parts?
+- What stack does it use?
+- What is the current implementation or release state?
+- What are the top risks or next decisions?
+- Where can the reader click to inspect architecture, stack, docs, risks, tasks, and evidence?
+
+The artifact fails this bar if a reader must open README, docs, package files, or source files before understanding the basic project context.
+
+The artifact must also show evidence source types:
+
+- docs
+- code structure
+- config/runtime files
+- tests/scripts
+- external integration signals
+- recent changes when available
+
+If any major source type was not inspected, say so explicitly.
+
 ## Anti-Patterns
 
 Avoid:
 
 - treating HTML as prettier Markdown
 - treating HTML as a link index when the task calls for observation, drill-down, or decision support
+- generating project-level HTML from docs alone when code/config/runtime evidence is available
+- omitting project background, structure, stack, or current state from a project-level artifact
 - generating decorative pages with no decision value
 - leaving final decisions only in HTML
 - generating HTML for simple facts that belong in Markdown

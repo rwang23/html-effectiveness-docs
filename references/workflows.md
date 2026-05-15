@@ -5,12 +5,13 @@ Follow this workflow for project documentation work:
 ```text
 1. Context Scan
 2. Route
-3. Artifact Plan
-4. Create or Update Work Interface
-5. Extract Decisions
-6. Sync Markdown Source of Truth
-7. Verify
-8. Report
+3. Extract Project Intelligence when project-level output is needed
+4. Artifact Plan
+5. Create or Update Work Interface
+6. Extract Decisions
+7. Sync Markdown Source of Truth
+8. Verify
+9. Report
 ```
 
 ## 1. Context Scan
@@ -22,7 +23,10 @@ Inspect relevant local context before writing:
 - `docs/`
 - `context/`
 - existing plans, reports, changelogs, task lists, memory files, and handoff docs
-- code structure, design tokens, or recent diffs when relevant
+- code structure, entry points, routes, API handlers, workers/jobs, services/libs, tests, and fixtures
+- package manifests, lockfiles, framework config, deployment config, environment examples, database schemas, migrations, CI config, scripts, and smoke commands
+- external integration signals such as SDK imports, API clients, webhook handlers, auth/session code, env var names, and runtime adapters
+- recent git diff or log when relevant and available
 
 State material assumptions briefly when local structure is missing.
 
@@ -32,7 +36,36 @@ Choose one intent from `routing.md`. If multiple intents apply, choose the prima
 
 Use `docs-organization` when the user asks to clean up, organize, archive, consolidate, rename, move, or delete documentation.
 
-## 3. Artifact Plan
+Use `project-intelligence` for project-level orientation, repo understanding, project dashboards, architecture dashboards, rich docs dashboards, and handoffs that need project background, structure, stack, current state, and evidence.
+
+## 3. Extract Project Intelligence
+
+For project-level artifacts, read `project-intelligence.md` and create a Project Intelligence Packet before writing HTML.
+
+This is required for:
+
+- `project-intelligence`
+- `docs-dashboard`
+- `architecture-map`
+- `handoff`
+- `docs-organization`
+
+Skip this only when the user explicitly asks for a docs-only artifact.
+
+The packet must include:
+
+- project brief
+- domain model
+- system shape
+- tech stack
+- operational state
+- risk surface
+- source-of-truth map
+- evidence pointers
+
+Use docs as one signal, not the only signal. Compare docs against code/config/runtime evidence and mark mismatches.
+
+## 4. Artifact Plan
 
 Before creating a substantial artifact, identify:
 
@@ -43,8 +76,10 @@ Before creating a substantial artifact, identify:
 - Markdown sync target
 - verification method
 - richness contract for HTML artifacts: what the reader can compare, click, expand, filter, inspect, or export
+- first-screen intelligence contract: how the artifact will show project brief, structure, stack, current state, risks, and next drilldowns
+- evidence contract: which code/config/docs/runtime sources support the claims
 
-## 4. Create or Update Work Interface
+## 5. Create or Update Work Interface
 
 Create the smallest useful artifact that still behaves like a work interface.
 For HTML artifacts, do not stop at an index unless the user explicitly asked for an index.
@@ -97,19 +132,19 @@ Default behavior:
 - move only when references can be updated
 - update docs indexes and source-of-truth notes after approved execution
 
-## 5. Extract Decisions
+## 6. Extract Decisions
 
 Extract selected options, risks, tasks, architecture facts, preferences, open questions, and verification results.
 
-## 6. Sync Markdown Source of Truth
+## 7. Sync Markdown Source of Truth
 
 Use `markdown-sync.md` to choose durable targets. Do not duplicate large HTML content into Markdown; sync conclusions and references.
 
-## 7. Verify
+## 8. Verify
 
 Check file existence, readability, internal consistency, and interactive behavior when present.
 
-## 8. Report
+## 9. Report
 
 Final response must include:
 

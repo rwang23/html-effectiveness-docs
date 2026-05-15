@@ -30,10 +30,11 @@ Markdown docs = durable source of truth for decisions, tasks, architecture, memo
 ## Required First Moves
 
 1. Inspect project-local instructions first: `AGENTS.md`, `agents.md`, README files, `docs/`, and `context/` when present.
-2. Route the request before producing output.
-3. Decide whether the task needs Markdown, HTML, or both.
-4. If an HTML artifact produces decisions, risks, tasks, architecture facts, preferences, or verification results, sync those conclusions into Markdown.
-5. Verify artifacts and docs before claiming completion.
+2. For project-level artifacts, inspect code, config, runtime, tests, scripts, and external integration signals unless the user explicitly asks for docs-only.
+3. Route the request before producing output.
+4. Decide whether the task needs Markdown, HTML, or both.
+5. If an HTML artifact produces decisions, risks, tasks, architecture facts, preferences, or verification results, sync those conclusions into Markdown.
+6. Verify artifacts and docs before claiming completion.
 
 ## Routing
 
@@ -44,6 +45,8 @@ Read `references/routing.md` to classify the request into one of these intents:
 - `architecture-map`
 - `design-system`
 - `docs-audit`
+- `docs-organization`
+- `project-intelligence`
 - `handoff`
 - `review`
 - `report`
@@ -54,12 +57,14 @@ Read `references/routing.md` to classify the request into one of these intents:
 Read `references/workflows.md` and follow:
 
 ```text
-Context Scan -> Route -> Artifact Plan -> Create or Update Work Interface -> Extract Decisions -> Sync Markdown -> Verify -> Report
+Context Scan -> Route -> Extract Project Intelligence when needed -> Artifact Plan -> Create or Update Work Interface -> Extract Decisions -> Sync Markdown -> Verify -> Report
 ```
 
 ## Artifact Types
 
 Read `references/artifact-types.md` before creating HTML artifacts.
+
+For project-level artifacts, read `references/project-intelligence.md` before writing the HTML.
 
 Final HTML artifacts default to:
 

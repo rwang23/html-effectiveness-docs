@@ -24,6 +24,23 @@ portable, and useful for the next decision.
 - Use tables only when comparison benefits from rows and columns.
 - Keep mobile readability: single-column fallback, no fixed-width overflow for main content.
 
+## First Screen Intelligence Standard
+
+For project-level artifacts, the first screen must teach the project before it asks the reader to navigate.
+
+Within roughly the first screen, show:
+
+- what the project is
+- who or what it serves
+- core product or workflow
+- major system parts
+- core tech stack
+- current state or release posture
+- top risks or next decisions
+- clear drilldown entry points
+
+If the first screen is mostly title, metrics, and links, it is not rich enough.
+
 ## Style Thinking
 
 Do not hard-code a house style. Instead, design each artifact around the shape
@@ -49,6 +66,10 @@ Use these style principles:
 Use these reusable composition patterns:
 
 - Hero summary: one compact opening area with artifact type, project name, prompt/context, and the decision the page enables.
+- Project brief panel: what the project is, who it serves, current stage, and primary workflow.
+- System shape map: apps, packages, workers, services, schemas, external APIs, and runtime boundaries.
+- Stack strip: technologies grouped by frontend, backend, data, jobs, auth, deployment, testing, and integrations.
+- Current-state board: working surfaces, blocked surfaces, release gates, high-risk areas, and recent completed work.
 - Metrics strip: small facts such as effort, packages touched, risk count, owner, dates, or affected surfaces.
 - Option grid: parallel cards or columns for alternatives that must be compared.
 - Annotated code block: code plus short notes about what matters and where mistakes happen.
@@ -63,6 +84,7 @@ Pick only the patterns that serve the artifact. Do not include every pattern by 
 
 Before calling an HTML artifact complete, ask:
 
+- Can a new reader understand project background, structure, stack, and current state from the artifact itself?
 - Can the reader learn something important without clicking away?
 - Can the reader drill into the highest-risk or highest-value areas?
 - Are relationships visible, not only described?
@@ -71,6 +93,20 @@ Before calling an HTML artifact complete, ask:
 - Is there a clear next-agent export or handoff?
 
 If the answer is mostly no, the artifact is probably an index. Improve the artifact by adding a map, timeline, comparison, evidence drawer, annotated excerpt, or interactive focus control.
+
+## Drilldown Detail Standard
+
+For non-trivial project-level artifacts, include local drilldowns for at least four of these categories when evidence exists:
+
+- overview: project brief, domain model, and current state
+- architecture: system shape, module map, request flow, job flow, service boundaries
+- stack: technologies and evidence paths
+- docs: source-of-truth map, historical docs, generated artifacts, raw evidence
+- risks: risk surface, impact, evidence, next action
+- tasks: prioritized follow-up work and verification
+- evidence: file paths, snippets, command outputs, or summarized proof
+
+Use tabs, anchors, expandable sections, clickable cards, filters, or a detail pane. Do not require the reader to open many separate files just to understand the basics.
 
 ## Interaction Rules
 

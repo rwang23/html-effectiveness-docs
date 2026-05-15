@@ -34,6 +34,7 @@ The skill helps agents create:
 - exploration matrices for comparing solution directions
 - implementation plans with milestones, data flow, risks, and verification
 - architecture maps with modules, entry points, hot paths, and boundaries
+- project intelligence dashboards that combine docs, code, config, runtime, tests, scripts, and integration evidence
 - design references for tokens, components, variants, and states
 - documentation dashboards for audits, gaps, staleness, and duplication
 - annotated reviews for PRs, designs, architecture, or docs
@@ -50,6 +51,7 @@ references/
   routing.md
   workflows.md
   artifact-types.md
+  project-intelligence.md
   markdown-sync.md
   quality-bar.md
   html-patterns.md
@@ -62,6 +64,7 @@ The `references/` files hold the deeper behavior:
 - `routing.md` classifies the request.
 - `workflows.md` defines the default process.
 - `artifact-types.md` defines the supported HTML artifact types.
+- `project-intelligence.md` defines how project-level artifacts extract background, structure, stack, current state, risks, and evidence from docs plus code/config/runtime sources.
 - `markdown-sync.md` defines what must be written back to Markdown.
 - `quality-bar.md` defines completion criteria and anti-patterns.
 - `html-patterns.md` defines portable HTML conventions.
