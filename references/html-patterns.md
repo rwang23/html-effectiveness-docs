@@ -7,6 +7,12 @@ These patterns are inspired by the design approach in
 the exact CSS. The lesson is to make project knowledge spatial, skimmable,
 portable, and useful for the next decision.
 
+Treat that site as a style reference, not a style cage. Learn from its
+information density, sectioning, inline evidence, compact comparison layouts,
+and interaction patterns. Do not require artifacts to copy its palette,
+typography, spacing, borders, or tone. Agents may create a different visual
+language when the project, audience, or artifact type calls for it.
+
 ## File Rules
 
 - Prefer one directly openable `.html` file.
@@ -60,6 +66,31 @@ Use these style principles:
 - Show the recommendation without hiding alternatives. The reader should see both the decision path and the rejected paths.
 - Make artifacts feel portable. They should still make sense when opened outside the original chat or handed to another agent.
 - Let the artifact carry the project's tone. A SaaS implementation plan, design-system sheet, incident report, and playful prototype should not all look identical.
+- Preserve creative latitude. If a different layout, interaction model, or visual tone makes the artifact easier to understand, use it.
+- Match style to content. A technical risk map, design-system reference, onboarding explainer, and incident timeline can use different visual languages.
+
+## Style Reference Guidance
+
+When referencing `html-effectiveness`, borrow ideas such as:
+
+- compact first-screen framing
+- side-by-side option comparison
+- visible section numbering or labels
+- inline code, mockup, timeline, map, or risk evidence
+- restrained but meaningful visual hierarchy
+- copy/export affordances for agent handoff
+- interaction that reveals more detail without sending the reader away
+
+Do not treat these as mandatory surface styling:
+
+- exact colors
+- exact typefaces
+- exact border radius
+- exact card style
+- exact spacing scale
+- exact background treatment
+
+The artifact should feel intentional and project-specific, not like a cloned theme.
 
 ## Information Architecture Patterns
 
