@@ -16,6 +16,7 @@ language when the project, audience, or artifact type calls for it.
 ## File Rules
 
 - Prefer one directly openable `.html` file.
+- For project-level intelligence, prefer the stable path `docs/intel.html`.
 - Avoid build steps for documentation artifacts.
 - Use inline CSS and JavaScript only when they keep the artifact portable.
 - Keep the page readable without network access.

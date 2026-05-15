@@ -66,10 +66,10 @@ Read `references/artifact-types.md` before creating HTML artifacts.
 
 For project-level artifacts, read `references/project-intelligence.md` before writing the HTML.
 
-Final HTML artifacts default to:
+Project-level intelligence HTML defaults to:
 
 ```text
-docs/effectiveness-artifact/
+docs/intel.html
 ```
 
 Temporary explorations default to:
@@ -79,6 +79,11 @@ context/raw/
 ```
 
 Project-local rules override these defaults.
+
+When creating or updating `docs/intel.html`, check `AGENTS.md`, `agents.md`,
+`CLAUDE.md`, or `claude.md`. If one exists, add or update a reference telling
+future agents to read and maintain `docs/intel.html`. If none exists, report
+that the project has no agent instruction file and suggest adding one.
 
 ## Markdown Sync
 

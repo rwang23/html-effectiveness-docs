@@ -78,6 +78,7 @@ Before creating a substantial artifact, identify:
 - richness contract for HTML artifacts: what the reader can compare, click, expand, filter, inspect, or export
 - first-screen intelligence contract: how the artifact will show project brief, structure, stack, current state, risks, and next drilldowns
 - evidence contract: which code/config/docs/runtime sources support the claims
+- registration contract for `docs/intel.html`: which agent instruction file references it, or why no registration was possible
 
 ## 5. Create or Update Work Interface
 
@@ -97,6 +98,19 @@ Before writing the HTML, choose at least three of these affordances when the sou
 - export block for the next agent
 
 Keep it structured, readable, and directly useful.
+
+## Project Intelligence Registration
+
+When producing project-level intelligence HTML, default to `docs/intel.html`.
+
+After creating or updating it:
+
+1. Check for `AGENTS.md`, `agents.md`, `CLAUDE.md`, and `claude.md`.
+2. If any exist, add or update a short `Project Intelligence` section that references `docs/intel.html`.
+3. The instruction should tell future agents to read `docs/intel.html` and update it when project structure, stack, workflows, release state, risks, or source-of-truth docs change.
+4. If no instruction file exists, report that `docs/intel.html` could not be registered and suggest adding `AGENTS.md` or `CLAUDE.md`.
+
+Do not silently create a new agent instruction file unless the user asked to initialize project instructions.
 
 ## Documentation Organization Safety
 

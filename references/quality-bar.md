@@ -17,6 +17,7 @@ A successful run satisfies:
 - useful HTML when HTML is used
 - HTML artifacts expose relationships, evidence, and actions instead of merely linking to files
 - project-level HTML artifacts explain project background, structure, tech stack, current state, and evidence from docs plus code/config/runtime sources
+- project-level intelligence is written to a stable `docs/intel.html` entrypoint unless project-local rules choose another path
 - durable Markdown sync for decisions and project facts
 - readable handoff for a future agent or developer
 - verification performed and reported
@@ -60,6 +61,12 @@ The artifact must also show evidence source types:
 - recent changes when available
 
 If any major source type was not inspected, say so explicitly.
+
+When `docs/intel.html` is created or updated, the run is incomplete until one of
+these is true:
+
+- `AGENTS.md`, `agents.md`, `CLAUDE.md`, or `claude.md` references it and says it should be maintained.
+- No agent instruction file exists, and the final report clearly says registration was not possible.
 
 ## Anti-Patterns
 

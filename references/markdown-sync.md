@@ -13,19 +13,44 @@ Markdown is the durable source of truth. HTML is the working surface.
 | Meaningful completed changes | `docs/CHANGELOG.md` |
 | User preferences, pitfalls, learned constraints | `docs/memory.md` |
 | Analysis reports and audits | `docs/report/*-YYYY-MM-DD-HH.md` |
-| Final HTML artifacts | `docs/effectiveness-artifact/` |
+| Project-level intelligence HTML | `docs/intel.html` |
 | Temporary explorations | `context/raw/` |
 
 ## Sync Rules
 
 - Sync conclusions, not entire HTML pages.
-- Link to final HTML artifacts when useful.
+- Link to `docs/intel.html` when useful.
 - Preserve project-local documentation rules.
-- Create `docs/effectiveness-artifact/` only when producing a final HTML artifact.
+- Create or update `docs/intel.html` for project-level intelligence artifacts.
 - Do not rewrite unrelated docs.
 - Do not erase user-authored content.
 - When docs are moved, renamed, archived, or deleted after approval, update all known references in the same change.
 - Record source-of-truth layout changes in durable docs such as `docs/FORYOU.md`, `docs/memory.md`, or a migration report.
+
+## Agent Instruction Registration
+
+When creating or updating `docs/intel.html`, register it in project agent
+instructions so future agents know it exists and should be maintained.
+
+Check for these files:
+
+- `AGENTS.md`
+- `agents.md`
+- `CLAUDE.md`
+- `claude.md`
+
+If one or more exists, add or update a short section:
+
+```markdown
+## Project Intelligence
+
+- Read `docs/intel.html` for the current project overview, architecture, stack, risks, docs map, and evidence.
+- When project structure, stack, workflows, release state, or source-of-truth docs change, update `docs/intel.html` in the same work session.
+```
+
+If none exists, do not silently create one unless the user asked to initialize
+agent instructions. Instead, report that no agent instruction file was found and
+suggest adding `AGENTS.md` or `CLAUDE.md`.
 
 ## Extraction Checklist
 

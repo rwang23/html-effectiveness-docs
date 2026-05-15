@@ -1,6 +1,6 @@
 # Artifact Types
 
-Final HTML artifacts default to `docs/effectiveness-artifact/`.
+Project-level intelligence HTML defaults to `docs/intel.html`.
 
 Temporary explorations default to `context/raw/` when the project uses `context/`.
 

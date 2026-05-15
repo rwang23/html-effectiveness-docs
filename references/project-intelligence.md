@@ -3,6 +3,14 @@
 Use this reference for project-level HTML artifacts such as `docs-dashboard.html`,
 `architecture-map.html`, `handoff` artifacts, and `docs-organization-workbench.html`.
 
+The default living artifact path for project intelligence is:
+
+```text
+docs/intel.html
+```
+
+Use this as the project-level HTML entrypoint unless project-local rules choose a different path.
+
 Project-level artifacts must not rely only on existing documentation unless the
 user explicitly asks for a docs-only view. Documentation is one signal. Code,
 configuration, runtime files, tests, scripts, generated artifacts, and recent
@@ -86,7 +94,9 @@ scope the scan. Do not read every file blindly when targeted search is enough.
 5. Compare code evidence with docs. Mark mismatches instead of smoothing them over.
 6. Build the Project Intelligence Packet.
 7. Use the packet to design the HTML first screen and drilldown layers.
-8. Sync durable conclusions back to Markdown only when they are accepted or useful as project memory.
+8. Write or update the living project intelligence artifact at `docs/intel.html`.
+9. Register `docs/intel.html` in `AGENTS.md`, `agents.md`, `CLAUDE.md`, or `claude.md` when an instruction file exists.
+10. Sync durable conclusions back to Markdown only when they are accepted or useful as project memory.
 
 ## First Screen Intelligence Standard
 
@@ -135,3 +145,4 @@ is omitted, explain why in the artifact or final report.
 - Do not infer the stack only from README when package/config files are available.
 - Do not present generated docs as source-of-truth without checking whether code agrees.
 - Do not hide current state, risks, or uncertainty behind a polished layout.
+- Do not leave `docs/intel.html` unreferenced in project agent instructions when an instruction file exists.

@@ -96,10 +96,10 @@ Context Scan
 
 ## 默认文件位置
 
-最终可交付 HTML artifact 默认放在：
+项目级智能 HTML 默认放在：
 
 ```text
-docs/effectiveness-artifact/
+docs/intel.html
 ```
 
 临时探索、草稿和中间过程默认放在：
@@ -122,10 +122,14 @@ docs/report/
 
 如果项目本地规则指定了其他目录，以项目规则为准。
 
+当 agent 创建或更新 `docs/intel.html` 时，也应该检查 `AGENTS.md`、
+`agents.md`、`CLAUDE.md` 或 `claude.md`，并把这个文件注册进去，让后续
+agent 知道要读取和维护它。
+
 ## 使用示例
 
 ```text
-Use html-effectiveness-docs to compare three implementation approaches and create a final artifact under docs/effectiveness-artifact/.
+Use html-effectiveness-docs to create or update docs/intel.html with project background, structure, stack, current state, risks, and evidence.
 ```
 
 ```text

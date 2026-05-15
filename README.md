@@ -86,10 +86,10 @@ The skill first inspects local project rules such as `AGENTS.md`, `README`, `doc
 
 ## Default Artifact Locations
 
-Final HTML artifacts should be written to:
+Project-level intelligence HTML should be written to:
 
 ```text
-docs/effectiveness-artifact/
+docs/intel.html
 ```
 
 Temporary explorations and drafts should go under:
@@ -112,12 +112,16 @@ docs/report/
 
 Project-local rules override these defaults.
 
+When an agent creates or updates `docs/intel.html`, it should also check
+`AGENTS.md`, `agents.md`, `CLAUDE.md`, or `claude.md` and register the file so
+future agents know to read and maintain it.
+
 ## Usage Examples
 
 Ask your agent:
 
 ```text
-Use html-effectiveness-docs to compare three implementation approaches and create a final artifact under docs/effectiveness-artifact/.
+Use html-effectiveness-docs to create or update docs/intel.html with project background, structure, stack, current state, risks, and evidence.
 ```
 
 ```text
