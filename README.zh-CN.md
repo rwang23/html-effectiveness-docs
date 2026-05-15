@@ -4,6 +4,89 @@
 
 这个 skill 参考了 [The unreasonable effectiveness of HTML](https://thariqs.github.io/html-effectiveness/) 展示的模式：当文档需要对比、空间结构、视觉状态、交互反馈或交接清晰度时，一个自包含 HTML 文件往往比一大段线性 Markdown 更有效。
 
+## Clone
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git
+```
+
+## 安装
+
+这是一个普通的 Agent Skills 风格目录：一个包含 `SKILL.md` 和 `references/` 的文件夹。
+
+### Codex 安装方式
+
+```powershell
+git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
+```
+
+安装后重启 Codex 或重新加载 skills。
+
+### Claude Code 安装方式
+
+个人 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.claude/skills/html-effectiveness-docs
+```
+
+项目 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git .claude/skills/html-effectiveness-docs
+```
+
+Claude Code 会从 `~/.claude/skills/` 和项目 `.claude/skills/` 目录发现 skills。
+
+### OpenCode 安装方式
+
+OpenCode 原生全局 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.config/opencode/skill/html-effectiveness-docs
+```
+
+OpenCode 项目 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git .opencode/skill/html-effectiveness-docs
+```
+
+OpenCode 也可以发现 Claude-compatible skill 路径，所以 Claude Code 的安装路径也适合作为共享方案。
+
+### OpenClaw 安装方式
+
+全局 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.openclaw/skills/html-effectiveness-docs
+```
+
+工作区 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git skills/html-effectiveness-docs
+```
+
+如果 OpenClaw 环境允许 skills 访问工具或 shell，加载前建议先阅读 `SKILL.md` 和 `references/` 内容。
+
+### Hermes 安装方式
+
+本地 skill：
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.hermes/skills/html-effectiveness-docs
+```
+
+Hermes 也可以扫描外部 skill 目录。如果你把共享 skills 放在 `~/.agents/skills`，可以 clone 到那里，并在 `~/.hermes/config.yaml` 的 `skills.external_dirs` 中加入该目录。
+
+### 通用手动安装
+
+1. Clone 这个仓库。
+2. 把整个文件夹放到你的 agent skills 目录。
+3. 保持 `SKILL.md` 和 `references/` 在同一个目录下。
+4. 重启 agent 或重新加载 skill index。
+
 ## 背景
 
 很多项目文档不好用，不是因为内容少，而是因为表达方式太线性。
@@ -112,47 +195,6 @@ docs/report/
 ```
 
 如果项目本地规则指定了其他目录，以项目规则为准。
-
-## Clone
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git
-```
-
-## Codex 安装方式
-
-把这个仓库 clone 到 Codex skills 目录：
-
-```powershell
-git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
-```
-
-然后重启 Codex 或重新加载 skills。
-
-手动复制也可以：
-
-```powershell
-Copy-Item -Recurse -Force .\html-effectiveness-docs "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
-```
-
-## 其他 Agent 的安装方式
-
-这个仓库本质上是纯 Markdown skill。只要你的 agent 系统支持本地 skill、规则文件、system prompt 或 reusable instruction，都可以使用。
-
-通用方式：
-
-1. Clone 这个仓库。
-2. 把 `SKILL.md` 注册为 skill 入口。
-3. 保持 `references/` 和 `SKILL.md` 在同一目录。
-4. 让 agent 根据当前任务只读取相关 reference 文件。
-
-Claude Code 风格的 agent 如果支持 skills，可以复制到类似目录：
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.claude/skills/html-effectiveness-docs
-```
-
-Cursor、Windsurf 或其他 IDE agent 可以把 `SKILL.md` 加入 rules/custom instructions，并保证 agent 能读取旁边的 `references/` 文件。
 
 ## 使用示例
 

@@ -6,6 +6,89 @@ A Codex skill for project documentation that turns complex project knowledge int
 
 Inspired by [The unreasonable effectiveness of HTML](https://thariqs.github.io/html-effectiveness/).
 
+## Clone
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git
+```
+
+## Install
+
+This is a plain Agent Skills-style package: one folder with `SKILL.md` plus a `references/` directory.
+
+### Install for Codex
+
+```powershell
+git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
+```
+
+Restart Codex or reload skills after installation.
+
+### Install for Claude Code
+
+Personal skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.claude/skills/html-effectiveness-docs
+```
+
+Project skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git .claude/skills/html-effectiveness-docs
+```
+
+Claude Code discovers skills from `~/.claude/skills/` and project `.claude/skills/` directories.
+
+### Install for OpenCode
+
+OpenCode native global skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.config/opencode/skill/html-effectiveness-docs
+```
+
+OpenCode project skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git .opencode/skill/html-effectiveness-docs
+```
+
+OpenCode can also discover Claude-compatible skill paths, so the Claude Code install path is a useful shared option.
+
+### Install for OpenClaw
+
+Global skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.openclaw/skills/html-effectiveness-docs
+```
+
+Workspace skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git skills/html-effectiveness-docs
+```
+
+Review the skill contents before loading it into OpenClaw, especially in environments where skills can access tools or shell commands.
+
+### Install for Hermes
+
+Local skill:
+
+```bash
+git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.hermes/skills/html-effectiveness-docs
+```
+
+Hermes can also scan external skill directories. If you keep shared skills in `~/.agents/skills`, clone there and add that directory to `skills.external_dirs` in `~/.hermes/config.yaml`.
+
+### Generic Manual Install
+
+1. Clone this repository.
+2. Put the folder in your agent's skills directory.
+3. Keep `SKILL.md` and `references/` together.
+4. Restart or reload the agent's skill index.
+
 ## Background
 
 Project documentation often fails because it is too linear. Architecture, implementation plans, design systems, PR reviews, reports, and handoffs are usually spatial and comparative: there are modules, tradeoffs, timelines, flows, states, risks, and decisions.
@@ -102,53 +185,6 @@ docs/report/
 ```
 
 Project-local rules override these defaults.
-
-## Clone
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git
-```
-
-## Install for Codex
-
-Copy or clone this repository into your Codex skills directory:
-
-```powershell
-git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
-```
-
-Then restart Codex or reload skills.
-
-Manual install:
-
-```powershell
-Copy-Item -Recurse -Force .\html-effectiveness-docs "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
-```
-
-## Install for Other Agents
-
-This repository is plain Markdown. Any agent system that supports local skills, instructions, or reusable prompts can use it.
-
-### Generic local-agent install
-
-1. Clone the repo.
-2. Register `SKILL.md` as the skill entrypoint.
-3. Keep the `references/` folder beside `SKILL.md`.
-4. Tell the agent to read only the relevant reference file for the current task.
-
-### Claude Code-style agents
-
-Copy the folder into the agent's skills directory if your setup supports skills:
-
-```bash
-git clone https://github.com/rwang23/html-effectiveness-docs.git ~/.claude/skills/html-effectiveness-docs
-```
-
-If your agent does not have a formal skill directory, add `SKILL.md` to your project instructions and keep `references/` available as linked context.
-
-### Cursor, Windsurf, or IDE agents
-
-Clone the repository somewhere stable and reference `SKILL.md` from your rules or custom instructions. The important part is that the agent can open the adjacent `references/` files.
 
 ## Usage Examples
 
