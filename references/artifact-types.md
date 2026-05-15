@@ -68,12 +68,27 @@ Use for documentation audits.
 
 Required sections:
 
-- document inventory
-- coverage map
-- missing documents
-- stale or contradictory docs
-- duplicate content
+- source-of-truth map that shows which docs are authoritative, historical, raw evidence, or generated output
+- document relationship view, not just a flat list; show how README, plans, reports, memory, architecture docs, and artifacts connect
+- coverage map with gaps, stale areas, contradictions, and duplicated responsibilities
+- prioritized cleanup board with impact, owner or next actor, target file, and verification method
+- drill-down views for important document groups, using tabs, filters, collapsible sections, or clickable cards
+- evidence excerpts for major findings, including short quoted snippets or summarized proof with file paths
+- before/after or desired-state model when the audit recommends a reorganization
 - recommended task-list updates
+- export block with Markdown follow-up tasks and source-of-truth decisions
+
+Minimum interaction:
+
+- filter or focus control for document groups
+- clickable anchors or tabs for at least the major categories
+- expandable evidence or detail sections for important findings
+
+Avoid:
+
+- a dashboard that is only a metrics strip plus link index
+- a table that lists files without explaining relationships, conflicts, or next actions
+- links that replace analysis; the artifact should make the structure observable before the reader opens another file
 
 ## interactive-editor.html
 

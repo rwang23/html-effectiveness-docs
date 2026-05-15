@@ -40,10 +40,26 @@ Before creating a substantial artifact, identify:
 - output path
 - Markdown sync target
 - verification method
+- richness contract for HTML artifacts: what the reader can compare, click, expand, filter, inspect, or export
 
 ## 4. Create or Update Work Interface
 
-Create the smallest useful artifact. Keep it structured, readable, and directly useful.
+Create the smallest useful artifact that still behaves like a work interface.
+For HTML artifacts, do not stop at an index unless the user explicitly asked for an index.
+
+Before writing the HTML, choose at least three of these affordances when the source material supports them:
+
+- side-by-side comparison
+- diagram, map, or flow
+- timeline or sequence
+- drill-down tabs or anchors
+- collapsible evidence
+- filter or search
+- annotated code, file, or document excerpts
+- prioritized board or risk table
+- export block for the next agent
+
+Keep it structured, readable, and directly useful.
 
 ## 5. Extract Decisions
 

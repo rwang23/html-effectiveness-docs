@@ -59,6 +59,19 @@ Use these reusable composition patterns:
 
 Pick only the patterns that serve the artifact. Do not include every pattern by default.
 
+## Richness Checklist
+
+Before calling an HTML artifact complete, ask:
+
+- Can the reader learn something important without clicking away?
+- Can the reader drill into the highest-risk or highest-value areas?
+- Are relationships visible, not only described?
+- Are findings backed by evidence or examples?
+- Is there a recommended path through the artifact?
+- Is there a clear next-agent export or handoff?
+
+If the answer is mostly no, the artifact is probably an index. Improve the artifact by adding a map, timeline, comparison, evidence drawer, annotated excerpt, or interactive focus control.
+
 ## Interaction Rules
 
 Use interaction when it helps the reader decide or export state:
