@@ -65,6 +65,9 @@ The packet must include:
 
 Use docs as one signal, not the only signal. Compare docs against code/config/runtime evidence and mark mismatches.
 
+When writing `docs/intel.html`, also read `project-intelligence-artifact.md`.
+When a richer visual artifact is needed, read `style-reference.md` before writing HTML.
+
 ## 4. Artifact Plan
 
 Before creating a substantial artifact, identify:
@@ -98,6 +101,8 @@ Before writing the HTML, choose at least three of these affordances when the sou
 - export block for the next agent
 
 Keep it structured, readable, and directly useful.
+
+For `docs/intel.html`, follow `project-intelligence-artifact.md`; it must behave like a project intelligence workbench, not a documentation index.
 
 ## Project Intelligence Registration
 

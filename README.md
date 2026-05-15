@@ -52,9 +52,11 @@ references/
   workflows.md
   artifact-types.md
   project-intelligence.md
+  project-intelligence-artifact.md
   markdown-sync.md
   quality-bar.md
   html-patterns.md
+  style-reference.md
 ```
 
 `SKILL.md` stays small. It tells the agent when to use the skill and which reference file to read.
@@ -65,9 +67,11 @@ The `references/` files hold the deeper behavior:
 - `workflows.md` defines the default process.
 - `artifact-types.md` defines the supported HTML artifact types.
 - `project-intelligence.md` defines how project-level artifacts extract background, structure, stack, current state, risks, and evidence from docs plus code/config/runtime sources.
+- `project-intelligence-artifact.md` defines the product shape for `docs/intel.html`.
 - `markdown-sync.md` defines what must be written back to Markdown.
 - `quality-bar.md` defines completion criteria and anti-patterns.
 - `html-patterns.md` defines portable HTML conventions.
+- `style-reference.md` summarizes the style and interaction lessons from `html-effectiveness`.
 
 ## Default Workflow
 

@@ -65,6 +65,7 @@ Context Scan -> Route -> Extract Project Intelligence when needed -> Artifact Pl
 Read `references/artifact-types.md` before creating HTML artifacts.
 
 For project-level artifacts, read `references/project-intelligence.md` before writing the HTML.
+For `docs/intel.html`, also read `references/project-intelligence-artifact.md`.
 
 Project-level intelligence HTML defaults to:
 
@@ -98,5 +99,6 @@ Read `references/quality-bar.md` before final response.
 ## HTML Patterns
 
 Read `references/html-patterns.md` when creating a self-contained HTML artifact.
+Read `references/style-reference.md` when the artifact needs richer visual and interaction design.
 
 Prefer a single directly openable `.html` file with no build step. Use structure, comparison, navigation, copy/export affordances, and responsive layout to make the artifact useful.

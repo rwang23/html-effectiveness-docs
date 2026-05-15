@@ -62,9 +62,11 @@ references/
   workflows.md
   artifact-types.md
   project-intelligence.md
+  project-intelligence-artifact.md
   markdown-sync.md
   quality-bar.md
   html-patterns.md
+  style-reference.md
 ```
 
 `SKILL.md` 保持短小，只负责触发、路由和入口说明。
@@ -75,9 +77,11 @@ references/
 - `workflows.md`：定义默认工作流。
 - `artifact-types.md`：定义支持的 HTML artifact 类型。
 - `project-intelligence.md`：定义项目级 artifact 如何从文档、代码、配置、运行时、测试和脚本中抽取背景、结构、技术栈、当前状态、风险和证据。
+- `project-intelligence-artifact.md`：定义 `docs/intel.html` 这个项目智能工作台应该长什么样。
 - `markdown-sync.md`：定义哪些结论要同步回 Markdown。
 - `quality-bar.md`：定义完成标准和反模式。
 - `html-patterns.md`：定义自包含 HTML 的写法和交互约束。
+- `style-reference.md`：归纳 `html-effectiveness` 的 style 和交互设计思路。
 
 ## 默认工作流
 

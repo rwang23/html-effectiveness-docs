@@ -62,6 +62,9 @@ The artifact must also show evidence source types:
 
 If any major source type was not inspected, say so explicitly.
 
+For `docs/intel.html`, also satisfy `project-intelligence-artifact.md`.
+It must be a project intelligence workbench, not only a docs/reference dashboard.
+
 When `docs/intel.html` is created or updated, the run is incomplete until one of
 these is true:
 
@@ -76,6 +79,7 @@ Avoid:
 - treating HTML as a link index when the task calls for observation, drill-down, or decision support
 - generating project-level HTML from docs alone when code/config/runtime evidence is available
 - omitting project background, structure, stack, or current state from a project-level artifact
+- producing `docs/intel.html` as a docs index instead of a project intelligence workbench
 - copying a reference site's visual skin without adapting the information architecture to the project
 - blocking agent creativity with fixed CSS rules when a different visual approach would communicate better
 - generating decorative pages with no decision value

@@ -7,6 +7,8 @@ These patterns are inspired by the design approach in
 the exact CSS. The lesson is to make project knowledge spatial, skimmable,
 portable, and useful for the next decision.
 
+For a deeper reference, read `style-reference.md`.
+
 Treat that site as a style reference, not a style cage. Learn from its
 information density, sectioning, inline evidence, compact comparison layouts,
 and interaction patterns. Do not require artifacts to copy its palette,

@@ -1,6 +1,7 @@
 # Artifact Types
 
 Project-level intelligence HTML defaults to `docs/intel.html`.
+For `docs/intel.html`, follow `project-intelligence-artifact.md`.
 
 Temporary explorations default to `context/raw/` when the project uses `context/`.
 
