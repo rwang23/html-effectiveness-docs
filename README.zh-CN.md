@@ -1,6 +1,16 @@
 # html-effectiveness-docs
 
-`html-effectiveness-docs` 是一个面向项目文档的 agent skill。它帮助 agent 把复杂项目知识做成可阅读、可比较、可交接、可继续执行的 HTML 工作界面，并把最终结论同步回 Markdown 长期文档。
+把复杂项目材料做成便于比较、规划、评审和交接的自包含 HTML 界面，再把长期决策写回 Markdown。
+
+[English](README.md) · [Codex 安装](#codex-安装方式) · [Claude Code 安装](#claude-code-安装方式) · [使用示例](#使用示例)
+
+可以直接告诉 Agent：
+
+> 请使用 html-effectiveness-docs 为这个仓库创建架构地图，再把长期适用的理解写入 docs/FORYOU.md。
+
+![HTML Effectiveness Docs 示意动图：在 HTML 中比较方案，再把决策写回 Markdown](assets/readme-demo.gif)
+
+*图中是样例项目内容，不是实际项目审计结果。[查看静态图](assets/readme-demo-poster.png)。*
 
 这个 skill 参考了 [The unreasonable effectiveness of HTML](https://thariqs.github.io/html-effectiveness/) 展示的模式：当文档需要对比、空间结构、视觉状态、交互反馈或交接清晰度时，一个自包含 HTML 文件往往比一大段线性 Markdown 更有效。
 
@@ -146,15 +156,18 @@ Use html-effectiveness-docs to create an architecture map of this repo, then wri
 
 ## 安装
 
-这是一个普通的 Agent Skills 风格目录：一个包含 `SKILL.md` 和 `references/` 的文件夹。
+这是一个普通的 Agent Skills 风格目录：一个包含 `SKILL.md` 和 `references/` 的文件夹。下列安装方式说明各客户端的目录，不代表已在所有客户端版本和配置中完成兼容性测试。
 
 ### Codex 安装方式
 
+如果客户端已经能发现一份 `html-effectiveness-docs`，请复用已有安装。
+
 ```powershell
-git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
+New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
+git clone https://github.com/rwang23/html-effectiveness-docs.git "$HOME\.agents\skills\html-effectiveness-docs"
 ```
 
-安装后重启 Codex 或重新加载 skills。
+Codex 会从个人目录或项目内 `.agents/skills/` 发现 Skill。如果没有出现，请重启 Codex。详见 [Codex 官方说明](https://learn.chatgpt.com/docs/build-skills)。
 
 ### Claude Code 安装方式
 

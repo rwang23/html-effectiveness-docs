@@ -1,8 +1,16 @@
 # html-effectiveness-docs
 
-An agent skill for project documentation that turns complex project knowledge into useful HTML work interfaces, then syncs durable conclusions back into Markdown.
+Turn dense project material into a self-contained HTML interface for comparison, planning, review, or handoff, then sync durable decisions back into Markdown.
 
 [中文说明](README.zh-CN.md)
+
+[Codex install](#install-for-codex) · [Claude Code install](#install-for-claude-code) · [Usage examples](#usage-examples)
+
+Try: `Use html-effectiveness-docs to create an architecture map of this repo, then write the durable mental model to docs/FORYOU.md.`
+
+![Illustrative project-documentation workflow using sample project data, not a real project audit](assets/readme-demo.gif)
+
+*Illustrative workflow with sample project data. The HTML shown is not a real project audit. [Open the poster](assets/readme-demo-poster.png).*
 
 Inspired by [The unreasonable effectiveness of HTML](https://thariqs.github.io/html-effectiveness/).
 
@@ -138,15 +146,18 @@ Use html-effectiveness-docs to create an architecture map of this repo, then wri
 
 ## Install
 
-This is a plain Agent Skills-style package: one folder with `SKILL.md` plus a `references/` directory.
+This is a plain Agent Skills-style package: one folder with `SKILL.md` plus a `references/` directory. The installation examples below document paths for several agent clients; they are not a compatibility test matrix for every client version or configuration.
 
 ### Install for Codex
 
+If your client already discovers an installed copy of `html-effectiveness-docs`, reuse it instead of cloning a second copy.
+
 ```powershell
-git clone https://github.com/rwang23/html-effectiveness-docs.git "$env:USERPROFILE\.codex\skills\html-effectiveness-docs"
+New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
+git clone https://github.com/rwang23/html-effectiveness-docs.git "$HOME\.agents\skills\html-effectiveness-docs"
 ```
 
-Restart Codex or reload skills after installation.
+Codex discovers the personal folder and repository-local .agents/skills/ folders. Restart Codex if the Skill does not appear. See the [Codex Skills guide](https://learn.chatgpt.com/docs/build-skills).
 
 ### Install for Claude Code
 
